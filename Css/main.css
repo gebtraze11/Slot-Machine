@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+h1{
+    font-size: 8vmin;
+    margin-right: 17vmin;
+      letter-spacing: 10px;
+}
+.test{
+  overflow-y: hidden;
+	max-height: 500px;
+
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+h2{
+    height: 29vmin;
+    font-size: 71vh;
+    color: brown;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    transform: rotate(14deg);
+    margin-left: 7vmin; 
+}
+
+.play-area {
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#machine {
+    width:max-content;
+    height: max-content;
+    border: 5vmin solid rgb(154, 1, 2);
+    border-radius: 6vmin;
+    z-index: 1;
+}
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 20vmin);
+    grid-template-rows: repeat(3, 20vmin);  
+    border-radius: 6vmin;
+    grid-gap: .3vmin; 
+    
+  
+}
+#box{
+    /* font-size:12vmin; */
+    text-align: center;
+    position: relative;
+}
+.box>img{
+   width: 90%;
+   height:90%;
+   display:block;
+   padding: 2% 5%;
+   position: relative;
+   transition: 2s ease;
+}
+.slidedown{
+  position: relative;
+  bottom:100%
+}
+
+section div{
+    border:.5vmin solid rgb(64, 87, 11);
+    background-color: white;
+    /* border-radius: 1vmin; */
+}
+  #handle {
+    font-size: 200px;
+    height: 60vmin;
+  }
+
+  .drag {
+    position: relative;
+    animation: mymove .5s;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes mymove {
+    0%   {top: 0px;}
+    50%  {top: -20px;}
+    50%  {transform: rotateX(180deg);}
+    100% {top: 0px;}
+  }
+  
+  #spin{
+    background-color: brown;
+    border: none;
+    color: white;
+    width: 40vmin;
+    margin-right: 20vmin;
+    text-align: center;
+    display: inline-block;
+    font-size: 5vmin;
+      border-radius: 20vmin;
+  }    
+
+  #handle{
+      border: none;
+      background-color: white;
+     
+  }
+  button:hover {
+    background-color: black;
+    color: white;
+  }
+ .slide {
+  border: 1px solid red;
+ }
+ h3{
+   font-size:40px;
+   margin-left: -14%;
+ }
+ input{
+   max-width: 70px;;
+   border: 2px solid red;
+ }
