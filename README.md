@@ -1,5 +1,5 @@
 # <center>Slot-Machine-Project 1</center>
-Start Game by clicking here: https://gebtraze11.github.io/Slot-Machine-Project1/
+Start Game by clicking here: https://gebtraze11.github.io/Slot-Machine/
 ---
 
 ---
