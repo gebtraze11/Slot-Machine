@@ -3,7 +3,7 @@
 }
 
 body{
-    height: 100vh;
+    height: 90%;
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -11,7 +11,7 @@ body{
    
 }
 h1{
-    font-size: 8vmin;
+    font-size: 4vmin;
     margin-right: 17vmin;
       letter-spacing: 10px;
 }
@@ -23,19 +23,14 @@ h1{
 	transition-duration: .5s;
 	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
-h2{
-    height: 29vmin;
-    font-size: 71vh;
-    color: brown;
-    font-family: 'Encode Sans Condensed', sans-serif;
-    transform: rotate(14deg);
-    margin-left: 7vmin; 
-}
+
 
 .play-area {
     display:flex;
     align-items: flex-end;
     justify-content: flex-end;
+    margin-top: 60vmin;
+    height: 10vh;
 }
 
 #machine {
@@ -58,6 +53,8 @@ section {
 #box{
     text-align: center;
     position: relative;
+    font-size: 10vmin;
+    background-color: antiquewhite;
 }
 .box>img{
    width: 90%;
@@ -75,6 +72,7 @@ section {
 section div{
     border:.5vmin solid rgb(64, 87, 11);
     background-color: white;
+    border-radius: 2vmin;
 }
   #handle {
     font-size: 200px;
@@ -119,10 +117,21 @@ section div{
   border: 1px solid red;
  }
  h3{
-   font-size:40px;
+   font-size:5vmin;
    margin-left: -14%;
  }
  input{
    max-width: 70px;;
    border: 2px solid red;
  }
+ #amt{
+   text-align: center;
+   margin-right: 16vmin;
+ }
+.chart{
+   display:none;
+ }
+ h4{
+   font-size: 3vmin;
+ }
+ 

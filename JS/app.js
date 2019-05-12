@@ -1,12 +1,24 @@
+var n1 = document.getElementById('n1');
+var n2 = document.getElementById('n2');
+var n3 = document.getElementById('n3');
+var n4 = document.getElementById('n4');
+var n5 = document.getElementById('n5');
+var n6 = document.getElementById('n6');
+var n7 = document.getElementById('n7');
+var n8 = document.getElementById('n8');
+var n9 = document.getElementById('n9');
+var button = document.getElementsByClassName('start');
+var num = document.getElementById('credit');
+var msg = document.getElementById('lost')
+var credit = parseInt(num.innerHTML);
+console.log(credit);
 
-// COLUMN 1
-var function1 = function(){
-const column1 = [$(`<img src="Images/icons/3bar.png">`), $(`<img src="Images/icons/berry.jpg">`), $(`<img src="Images/icons/7.png">`), $(`<img src="Images/icons/W.png">`),$(`<img src="Images/icons/clover.jpg">`),$(`<img src="Images/icons/melon.png">`),$(`<img src="Images/icons/cherry.png">`)];
 
 
-var first = column1.slice();
 
-randomCol1 = function(){
+// Random Number Generator-------------
+
+uniqueRandomArray = () => {
 var arr = []
 while(arr.length < 3){
 var r = generateRandomNumber() ;
@@ -14,108 +26,78 @@ if(arr.indexOf(r) === -1) arr.push(r);
 }
 return arr
 }
- generateRandomNumber = function(){
-   return first[Math.floor((Math.random() * first.length))]
-};
-
-
-
-const randomArr1 = randomCol1()
-var i = 0;
-function loop(){
-        if (++i < randomArr1.length) {
-            setTimeout(loop, 800); 
-            $('#n1').html(randomArr1[0]);
-            $('#n2').html(randomArr1[1]);
-            $('#n3').html(randomArr1[2]);
-         }
-    }
-    loop(); 
-
-
-};
-// function1();
-// ----------------------------------------------------
-
-var function2 = function(){
-const column2 = [$(`<img src="Images/icons/3bar.png">`), $(`<img src="Images/icons/berry.jpg">`), $(`<img src="Images/icons/7.png">`), $(`<img src="Images/icons/I.png">`),$(`<img src="Images/icons/clover.jpg">`),$(`<img src="Images/icons/melon.png">`),$(`<img src="Images/icons/cherry.png">`)];
-
-var second = column2.slice();
-
-randomCol2 = function(){
-var arr = []
-while(arr.length < 3){
-var r = generateRandomNumber() ;
-if(arr.indexOf(r) === -1) arr.push(r);
+ generateRandomNumber = () => {
+   return Math.floor((Math.random() * 9) + 1)
 }
-return arr
-}
- generateRandomNumber = function(){
-   return second[Math.floor((Math.random() * second.length))]
+
+
+var win = function(){
+  var credit = parseInt(num.innerHTML);
+
+  if (n1.innerHTML == n4.innerHTML && n4.innerHTML == n7.innerHTML){
+    num.innerHTML = credit + 30; 
+  } else if (n2.innerHTML == n5.innerHTML && n5.innerHTML == n8.innerHTML){
+    num.innerHTML = credit + 30;
+  } else if (n3.innerHTML == n6.innerHTML && n6.innerHTML == n9.innerHTML){
+    num.innerHTML = credit + 30;
+  } else if (n1.innerHTML == n4.innerHTML){
+    num.innerHTML = credit + 10;
+  } else if (n2.innerHTML == n5.innerHTML){
+    num.innerHTML = credit + 10;
+  } else if (n3.innerHTML == n6.innerHTML){
+    num.innerHTML = credit + 10;
+  } else if (n4.innerHTML == n7.innerHTML){
+    num.innerHTML = credit + 10;
+  } else if (n5.innerHTML == n8.innerHTML){
+    num.innerHTML = credit + 10;
+  } else if (n6.innerHTML == n9.innerHTML){
+    num.innerHTML = credit + 10;
+  } else{
+    num.innerHTML = credit - 5;
+  };
+  while (num.innerHTML <= 0){
+    alert('You Lost');
+    location.reload(true);
+    Default;
+  
+  }
 };
 
 
 
-const randomArr2 = randomCol2()
-var i = 0;
-function loop(){
-        if (++i < randomArr2.length) {
-            setTimeout(loop, 800); 
-            $('#n4').html(randomArr2[0]);
-            $('#n5').html(randomArr2[1]);
-            $('#n6').html(randomArr2[2]);
-         }
-    }
-    loop(); 
-};
-// function2();
+//  Click Function----------------
+  $("#handle, #spin").click(function () {
+    
+    random_array = uniqueRandomArray()
 
-//     // ------------------------------------------------------
+     $('#n1').html(random_array[0]);
+    $('#n2').html(random_array[1]);
+    $('#n3').html(random_array[2]);
 
+     random_array = uniqueRandomArray()
 
-var function3 = function(){
-    const column3 = [$(`<img src="Images/icons/3bar.png">`), $(`<img src="Images/icons/berry.jpg">`), $(`<img src="Images/icons/7.png">`), $(`<img src="Images/icons/N.png">`),$(`<img src="Images/icons/clover.jpg">`),$(`<img src="Images/icons/melon.png">`),$(`<img src="Images/icons/cherry.png">`)];
+     $('#n4').html(random_array[0]);
+    $('#n5').html(random_array[1]);
+    $('#n6').html(random_array[2]);
 
-var third = column3.slice();
+     random_array = uniqueRandomArray()
 
-randomCol3 = function(){
-var arr = []
-while(arr.length < 3){
-var r = generateRandomNumber() ;
-if(arr.indexOf(r) === -1) arr.push(r);
-}
-return arr
-}
- generateRandomNumber = function(){
-   return third[Math.floor((Math.random() * third.length))]
-};
+     $('#n7').html(random_array[0]);
+    $('#n8').html(random_array[1]);
+    $('#n9').html(random_array[2]);
 
-
-
-const randomArr3 = randomCol3()
-var i = 0;
-function loop(){
-        if (++i < randomArr3.length) {
-            setTimeout(loop, 800); 
-            $('#n7').html(randomArr3[0]);
-            $('#n8').html(randomArr3[1]);
-            $('#n9').html(randomArr3[2]);
-         }
-    }
-    loop(); 
-};
-
-
-
-
-$('#handle, .spin').on('click', function(){
-
-    function1();
-    function2();
-    function3();
     $('#handle').addClass("drag").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
-              $('#handle').removeClass("drag");
-            });
-});
+      $('#handle').removeClass("drag");
+      win();
+      // console.log(bet);
+    });
+  });
 
-
+ $('#close').on('click', function(){
+   console.log('hello')
+   $('#rules').addClass('chart');
+ })
+ $('#winchart').on('click', function(){
+  console.log('hello')
+  $('#rules').removeClass('chart');
+})

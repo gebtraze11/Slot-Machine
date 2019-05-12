@@ -14,33 +14,49 @@
     crossorigin="anonymous"></script>
     <link rel="icon" href="Images/img.ico" type="image/x-icon">
     <script defer src="JS/app.js"></script>
+    <script defer src="JS/js.js"></script>
 
 </head>
 <body>
-    <h1>SPIN TO WIN</h1>
-    <h3>Enter Bet amount <input type="number" required></h3>
+    <h1>CLICK SPIN OR HANDLE TO WIN</h1>
+    <div id ="amt">
+    <h4 id = "lost" >Your Credit</h4><h4 id = credit>100</h4> <button id='winchart'>WIN CHART</button>
+    </div>
+    
+    <p > <ul id = rules>
+            <li>Each Spin cost 5 credits.</li>
+            <li>Win 30 credits if you match all numbers in first, second or third row</li>
+            <li>Win 10 credits if you match numbers in starting two boxes or last two boxes</li>
+            <li>If you loose all credit, game will restart.</li>
+            <button id = 'close'>Hide</button>
+        </ul> </p>
+   
     <div class="play-area">
         <div id="machine">
             <section id="box">
-                <div class ="box" id="n1"><img id="3bar" src="Images/icons/3bar.png" > </div>
-                <div class ="box" id="n4"><img id="berry" src="Images/icons/berry.jpg" width="150px" height="130px" alt=""></div>
-                <div class ="box" id="n7"><img id="7" src="Images/icons/7.png" width="150px" height="140px" alt=""></div>
+                <div class ="box" id="n1"><img src="Images/icons/spin.png" > </div>
+                <div class ="box" id="n4"><img src="Images/icons/spin.png"></div>
+                <div class ="box" id="n7"><img src="Images/icons/spin.png"></div>
     
-                <div class ="box" id="n2"><img id="w" src="Images/icons/W.png" width="150px" height="140px" alt=""></div>
-                <div class ="box" id="n5"><img id="i" src="Images/icons/I.png" width="40px" height="140px" alt=""></div>
-                <div class ="box" id="n8"><img id="n" src="Images/icons/N.png" width="120px" height="140px" alt=""></div>
+                <div class ="box" id="n2"><img src="Images/icons/spin.png"></div>
+                <div class ="box" id="n5"><img src="Images/icons/spin.png"></div>
+                <div class ="box" id="n8"><img src="Images/icons/spin.png"></div>
     
-                <div class ="box" id="n3"><img id="clover" src="Images/icons/clover.jpg" width="170px" height="140px" alt=""></div>
-                <div class ="box" id="n6"><img id="melon" src="Images/icons/melon.png" width="150px" height="140px" alt=""></div>
-                <div class ="box" id="n9"><img id="cherry" src="Images/icons/cherry.png" width="150px" height="140px" alt=""></div> 
+                <div class ="box" id="n3"><img src="Images/icons/spin.png"></div>
+                <div class ="box" id="n6"><img src="Images/icons/spin.png"></div>
+                <div class ="box" id="n9"><img src="Images/icons/spin.png"></div> 
             </section>
         </div>
-       <img id= "handle" src="Images/handle.png" alt="" srcset="">
+       <img id= "handle" class="start" src="Images/handle.png" alt="" srcset="">
+       
     </div>
 
-    <button class="spin" id="spin">SPIN</button>
+    <button class="start" id="spin">SPIN</button>
 
+   
+  
 
     
+
 </body>
 </html>
