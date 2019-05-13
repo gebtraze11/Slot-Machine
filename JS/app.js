@@ -11,7 +11,7 @@ var button = document.getElementsByClassName('start');
 var num = document.getElementById('credit');
 var msg = document.getElementById('lost')
 var credit = parseInt(num.innerHTML);
-console.log(credit);
+
 
 
 
@@ -27,7 +27,7 @@ if(arr.indexOf(r) === -1) arr.push(r);
 return arr
 }
  generateRandomNumber = () => {
-   return Math.floor((Math.random() * 9) + 1)
+   return Math.floor((Math.random() * 7) + 1)
 }
 
 
@@ -40,18 +40,22 @@ var win = function(){
     num.innerHTML = credit + 30;
   } else if (n3.innerHTML == n6.innerHTML && n6.innerHTML == n9.innerHTML){
     num.innerHTML = credit + 30;
-  } else if (n1.innerHTML == n4.innerHTML){
-    num.innerHTML = credit + 10;
-  } else if (n2.innerHTML == n5.innerHTML){
-    num.innerHTML = credit + 10;
-  } else if (n3.innerHTML == n6.innerHTML){
-    num.innerHTML = credit + 10;
-  } else if (n4.innerHTML == n7.innerHTML){
-    num.innerHTML = credit + 10;
-  } else if (n5.innerHTML == n8.innerHTML){
-    num.innerHTML = credit + 10;
-  } else if (n6.innerHTML == n9.innerHTML){
-    num.innerHTML = credit + 10;
+
+  // TO check all the boxes  
+  
+  // } else if (n1.innerHTML == n4.innerHTML){
+  //   num.innerHTML = credit + 10;
+  // } else if (n2.innerHTML == n5.innerHTML){
+  //   num.innerHTML = credit + 10;
+  // } else if (n3.innerHTML == n6.innerHTML){
+  //   num.innerHTML = credit + 10;
+  // } else if (n4.innerHTML == n7.innerHTML){
+  //   num.innerHTML = credit + 10;
+  // } else if (n5.innerHTML == n8.innerHTML){
+  //   num.innerHTML = credit + 10;
+  // } else if (n6.innerHTML == n9.innerHTML){
+  //   num.innerHTML = credit + 10;
+
   } else{
     num.innerHTML = credit - 5;
   };
