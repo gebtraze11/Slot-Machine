@@ -40,18 +40,21 @@ var win = function(){
     num.innerHTML = credit + 30;
   } else if (n3.innerHTML == n6.innerHTML && n6.innerHTML == n9.innerHTML){
     num.innerHTML = credit + 30;
-  } else if (n1.innerHTML == n4.innerHTML){
-    num.innerHTML = credit + 10;
-  } else if (n2.innerHTML == n5.innerHTML){
-    num.innerHTML = credit + 10;
-  } else if (n3.innerHTML == n6.innerHTML){
-    num.innerHTML = credit + 10;
-  } else if (n4.innerHTML == n7.innerHTML){
-    num.innerHTML = credit + 10;
-  } else if (n5.innerHTML == n8.innerHTML){
-    num.innerHTML = credit + 10;
-  } else if (n6.innerHTML == n9.innerHTML){
-    num.innerHTML = credit + 10;
+
+// Plays all 2 X 2 boxes
+
+  // } else if (n1.innerHTML == n4.innerHTML){
+  //   num.innerHTML = credit + 10;
+  // } else if (n2.innerHTML == n5.innerHTML){
+  //   num.innerHTML = credit + 10;
+  // } else if (n3.innerHTML == n6.innerHTML){
+  //   num.innerHTML = credit + 10;
+  // } else if (n4.innerHTML == n7.innerHTML){
+  //   num.innerHTML = credit + 10;
+  // } else if (n5.innerHTML == n8.innerHTML){
+  //   num.innerHTML = credit + 10;
+  // } else if (n6.innerHTML == n9.innerHTML){
+  //   num.innerHTML = credit + 10;
   } else{
     num.innerHTML = credit - 5;
   };
